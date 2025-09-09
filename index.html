@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trào Lưu "Nằm Yên Mặc Kệ Đời" - Phân Tích LLCT</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="float-element" style="width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="float-element" style="width: 40px; height: 40px; top: 20%; right: 15%; animation-delay: 2s;"></div>
+        <div class="float-element" style="width: 80px; height: 80px; bottom: 15%; left: 20%; animation-delay: 4s;"></div>
+        <div class="float-element" style="width: 50px; height: 50px; bottom: 20%; right: 10%; animation-delay: 1s;"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🛏️ Trào Lưu "Nằm Yên Mặc Kệ Đời"</h1>
+            <p>Phân tích từ góc độ Lý luận Nhận thức Duy vật Biện chứng</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button class="nav-btn active" onclick="showSection('intro', this)">Giới thiệu</button>
+            <button class="nav-btn" onclick="showSection('theory', this)">Lý thuyết LLCT</button>
+            <button class="nav-btn" onclick="showSection('analysis', this)">Phân tích trào lưu</button>
+            <button class="nav-btn" onclick="showSection('examples', this)">Ví dụ thực tiễn</button>
+            <button class="nav-btn" onclick="showSection('conclusion', this)">Kết luận</button>
+            <button class="nav-btn" onclick="showSection('quiz', this)">Kiểm tra</button>
+            <button class="nav-btn" onclick="showSection('ai-usage', this)">AI Usage</button>
+        </nav>
+
+        <!-- Content Sections -->
+        <div id="content-container">
+            <!-- Nội dung sẽ được load từ JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="data/content.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
