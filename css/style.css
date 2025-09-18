@@ -39,8 +39,9 @@ body {
 }
 
 .header p {
-    color: #7f8c8d;
+    color: #2c3e50;
     font-size: 1.2em;
+    font-weight: 500;
 }
 
 /* Navigation Styles */
@@ -138,9 +139,19 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: #2c3e50;
 }
 
-/* Quiz Styles */
+.conclusion-box h2,
+.conclusion-box h3 {
+    color: #2c3e50 !important;
+}
+
+.conclusion-box p {
+    color: #2c3e50 !important;
+}
+
+/* Quiz Styles - Updated */
 .quiz-container {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 15px;
@@ -164,32 +175,193 @@ body {
     margin: 10px 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #333333; /* Thêm màu chữ rõ ràng */
+    font-size: 16px; /* Đảm bảo font size */
+    font-weight: 500; /* Làm chữ đậm hơn một chút */
+    line-height: 1.4; /* Cải thiện độ cao dòng */
+    display: block; /* Đảm bảo hiển thị đúng */
+    position: relative; /* Cho animation */
 }
 
 .quiz-option:hover {
     border-color: #3498db;
     background: #f8f9ff;
     transform: translateX(5px);
+    color: #2c3e50; /* Màu chữ khi hover */
 }
 
 .quiz-option.correct {
-    background: #d4edda;
-    border-color: #28a745;
+    background: #d4edda !important;
+    border-color: #28a745 !important;
+    color: #155724 !important; /* Màu xanh đậm cho text đúng */
+    font-weight: 600;
 }
 
 .quiz-option.incorrect {
-    background: #f8d7da;
-    border-color: #dc3545;
+    background: #f8d7da !important;
+    border-color: #dc3545 !important;
+    color: #721c24 !important; /* Màu đỏ đậm cho text sai */
+    font-weight: 600;
+}
+
+/* Quiz explanation styles */
+.quiz-explanation {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    color: #856404 !important;
+    font-style: italic;
+    display: none;
+}
+
+/* Quiz result styles */
+#quizResult {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border: 2px solid #28a745;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#quizResult h3 {
+    color: #28a745 !important;
+    margin-bottom: 20px;
+}
+
+#quizResult #scoreText {
+    font-size: 1.5em;
+    color: #2c3e50 !important;
+    margin: 15px 0;
+}
+
+#quizResult #feedback {
+    color: #495057 !important;
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+/* Animation classes */
+.bounce {
+    animation: bounceEffect 0.6s ease;
+}
+
+@keyframes bounceEffect {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(5px);
+    }
+    40% {
+        transform: translateY(-10px) translateX(5px);
+    }
+    60% {
+        transform: translateY(-5px) translateX(5px);
+    }
+}
+
+.shake {
+    animation: shakeEffect 0.6s ease;
+}
+
+@keyframes shakeEffect {
+    0%, 100% {
+        transform: translateX(5px);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.scale-in {
+    animation: scaleInEffect 0.5s ease;
+}
+
+@keyframes scaleInEffect {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulseEffect 1.5s infinite;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Quiz button styles */
+.quiz-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white !important;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.quiz-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    color: white !important;
+}
+
+.quiz-btn:active {
+    transform: translateY(0);
+}
+
+/* AI Quiz generator button */
+.ai-quiz-btn {
+    background: linear-gradient(45deg, #6f42c1, #5a32a3);
+    color: white !important;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3);
+}
+
+.ai-quiz-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(111, 66, 193, 0.4);
+    color: white !important;
 }
 
 /* AI Usage Styles */
 .ai-usage {
-    background: linear-gradient(135deg, #e8f5e8, #d4edda);
+    background: linear-gradient(135deg, #292c29, #d4edda);
     border: 2px solid #28a745;
     border-radius: 15px;
     padding: 25px;
     margin: 30px 0;
-    color: #000; /* 🔹 thêm dòng này */
 }
 
 .ai-usage h3 {
@@ -201,11 +373,10 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
-    background: white;
+    background: rgb(73, 82, 74);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    color: #000; /* 🔹 thêm dòng này để chữ trong bảng mặc định màu đen */
 }
 
 .ai-table th,
@@ -217,7 +388,16 @@ body {
 
 .ai-table th {
     background: #3498db;
-    color: white; /* giữ header màu trắng cho nổi bật */
+    color: white;
+}
+
+.commitment-box {
+    background: linear-gradient(135deg, #312f2c, #ffe0b2);
+    border: 2px solid #ff9800;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    text-align: center;
 }
 
 /* Progress Bar */

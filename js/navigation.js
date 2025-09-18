@@ -73,11 +73,22 @@ function updateProgressBar() {
 }
 
 function createQuizContent() {
+    // AI tạo bộ quiz ngẫu nhiên mới
+    const randomQuiz = generateRandomQuiz();
+    
     let quizHTML = `
         <h2>📝 Kiểm tra kiến thức</h2>
+        <div style="background: linear-gradient(135deg, #000000ff, #4ba2e9ff); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+            <h3>🤖 Quiz được tạo bởi AI</h3>
+            <p>Hệ thống AI đã tự động tạo ra <strong>10 câu hỏi ngẫu nhiên</strong> từ ngân hàng 15+ câu hỏi về LLCT và trào lưu "nằm yên".</p>
+            <p><small>Mỗi lần làm bài sẽ có bộ câu hỏi khác nhau!</small></p>
+            <button onclick="regenerateQuiz()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+                🔄 Tạo bộ câu hỏi mới
+            </button>
+        </div>
     `;
     
-    quizData.forEach((quiz, index) => {
+    randomQuiz.forEach((quiz, index) => {
         quizHTML += `
             <div class="quiz-container" data-question="${index}">
                 <div class="quiz-question">
@@ -93,7 +104,12 @@ function createQuizContent() {
             `;
         });
         
-        quizHTML += `</div>`;
+        quizHTML += `
+                <div class="quiz-explanation" style="display: none; margin-top: 10px; padding: 10px; background: #f8f9fa; border-radius: 5px; border-left: 3px solid #28a745;">
+                    <strong>💡 Giải thích:</strong> ${quiz.explanation}
+                </div>
+            </div>
+        `;
     });
     
     quizHTML += `
@@ -101,13 +117,88 @@ function createQuizContent() {
             <h3>🎉 Kết quả kiểm tra</h3>
             <p id="scoreText"></p>
             <p><strong>Nhận xét:</strong> <span id="feedback"></span></p>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            <div id="detailedResults" style="margin-top: 15px;"></div>
+            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">
                 Làm lại
+            </button>
+            <button onclick="regenerateQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Tạo bộ câu hỏi mới
             </button>
         </div>
     `;
     
     return quizHTML;
+}
+
+// Hàm tạo lại quiz với bộ câu hỏi mới
+function regenerateQuiz() {
+    // Reset quiz state
+    quizScore = 0;
+    quizAnswered = 0;
+    userAnswers = [];
+    
+    // Tạo nội dung quiz mới
+    const quizSection = document.getElementById('quiz');
+    if (quizSection) {
+        quizSection.innerHTML = createQuizContent();
+        
+        // Scroll to top of quiz
+        quizSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Show notification
+        showNotification('🎲 Đã tạo bộ câu hỏi mới!', 'success');
+    }
+}
+
+// Hàm hiển thị notification
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        z-index: 10000;
+        transition: all 0.3s ease;
+        transform: translateX(100%);
+    `;
+    
+    // Set color based on type
+    switch(type) {
+        case 'success':
+            notification.style.background = '#28a745';
+            break;
+        case 'error':
+            notification.style.background = '#dc3545';
+            break;
+        case 'warning':
+            notification.style.background = '#ffc107';
+            notification.style.color = '#212529';
+            break;
+        default:
+            notification.style.background = '#17a2b8';
+    }
+    
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    // Slide in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 10);
+    
+    // Slide out and remove
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, 3000);
 }
 
 function createAIUsageContent() {

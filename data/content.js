@@ -296,8 +296,8 @@ const contentData = {
     }
 };
 
-// Quiz data
-const quizData = [
+// Quiz data - Ngân hàng câu hỏi để AI chọn ngẫu nhiên
+const quizQuestionBank = [
     {
         question: "Theo nguyên lý phản ánh của LLCT, trào lưu \"nằm yên mặc kệ đời\" phản ánh điều gì?",
         options: [
@@ -306,7 +306,8 @@ const quizData = [
             "C) Ảnh hưởng của công nghệ số",
             "D) Xu hướng sống tối giản của thời đại"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "Theo LLCT, nhận thức phản ánh thế giới khách quan, trào lưu này phản ánh các mâu thuẫn kinh tế-xã hội thực tế."
     },
     {
         question: "Theo quy luật từ cảm tính đến lý tính, trào lưu \"nằm yên\" mắc phải sai lầm gì?",
@@ -316,17 +317,19 @@ const quizData = [
             "C) Cân bằng tốt giữa cảm tính và lý tính",
             "D) Không có mối liên hệ với quy luật này"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "Trào lưu chỉ dừng ở việc cảm thấy mệt mỏi, áp lực mà không phân tích sâu nguyên nhân và giải pháp."
     },
     {
         question: "Thực tiễn đã chứng minh trào lưu \"nằm yên\" có tác động như thế nào?",
         options: [
             "A) Hoàn toàn tích cực",
-            "B) Hoàn toàn tiêu cực",
+            "B) Hoàn toàn tiêu cực", 
             "C) Có nhiều tác hại hơn lợi ích",
             "D) Cân bằng giữa lợi ích và tác hại"
         ],
-        correct: 2
+        correct: 2,
+        explanation: "Thực tiễn cho thấy trào lưu gây tác hại về kinh tế, xã hội nhiều hơn những lợi ích tạm thời."
     },
     {
         question: "Giải pháp thay thế tích cực cho trào lưu \"nằm yên\" là gì?",
@@ -336,9 +339,142 @@ const quizData = [
             "C) Làm việc cật lực không ngừng nghỉ",
             "D) Tránh xa mọi áp lực xã hội"
         ],
-        correct: 1
+        correct: 1,
+        explanation: "Thay vì thái độ tiêu cực, cần có kế hoạch hành động thực tế và từng bước cải thiện."
+    },
+    {
+        question: "Quy luật biện chứng nào bị vi phạm trong trào lưu \"nằm yên\"?",
+        options: [
+            "A) Quy luật phủ định của phủ định",
+            "B) Quy luật đối lập thống nhất", 
+            "C) Quy luật chuyển hóa từ lượng sang chất",
+            "D) Tất cả các quy luật trên"
+        ],
+        correct: 3,
+        explanation: "Trào lưu vi phạm cả ba quy luật: phủ nhận phát triển, tránh mâu thuẫn, ngăn cản sự thay đổi."
+    },
+    {
+        question: "Theo LLCT, vai trò của thực tiễn đối với nhận thức là gì?",
+        options: [
+            "A) Thực tiễn là sản phẩm của nhận thức",
+            "B) Thực tiễn là nguồn gốc, động lực và tiêu chuẩn kiểm nghiệm nhận thức",
+            "C) Thực tiễn không liên quan đến nhận thức",
+            "D) Thực tiễn chỉ là hình thức biểu hiện của nhận thức"
+        ],
+        correct: 1,
+        explanation: "Thực tiễn đóng vai trò quyết định: là nguồn gốc, động lực phát triển và tiêu chuẩn kiểm nghiệm chân lý."
+    },
+    {
+        question: "Trào lưu \"tang ping\" xuất phát từ quốc gia nào?",
+        options: [
+            "A) Nhật Bản",
+            "B) Hàn Quốc",
+            "C) Trung Quốc", 
+            "D) Singapore"
+        ],
+        correct: 2,
+        explanation: "\"Tang ping\" (躺平) xuất hiện đầu tiên tại Trung Quốc năm 2021 do áp lực làm việc \"996\"."
+    },
+    {
+        question: "Theo số liệu, tỷ lệ thanh niên Việt Nam có biểu hiện \"nằm yên\" là bao nhiêu?",
+        options: [
+            "A) 25%",
+            "B) 35%",
+            "C) 45%", 
+            "D) 55%"
+        ],
+        correct: 1,
+        explanation: "Theo khảo sát, khoảng 35% thanh niên từ 18-30 tuổi tại Việt Nam có biểu hiện \"nằm yên\"."
+    },
+    {
+        question: "Nhận thức cảm tính bao gồm những hình thức nào?",
+        options: [
+            "A) Khái niệm, phán đoán, suy lý",
+            "B) Cảm giác, tri giác, biểu tượng",
+            "C) Tư duy, ý thức, trí tuệ",
+            "D) Tất cả các hình thức trên"
+        ],
+        correct: 1,
+        explanation: "Nhận thức cảm tính gồm 3 hình thức: cảm giác, tri giác và biểu tượng - tiếp xúc trực tiếp với hiện thực."
+    },
+    {
+        question: "Đặc điểm nào KHÔNG thuộc về trào lưu \"nằm yên mặc kệ đời\"?",
+        options: [
+            "A) Từ bỏ việc phấn đấu trong công việc",
+            "B) Tích cực tìm kiếm cơ hội phát triển",
+            "C) Sống tối giản, đủ ăn đủ mặc",
+            "D) Tránh áp lực xã hội, cạnh tranh"
+        ],
+        correct: 1,
+        explanation: "\"Tích cực tìm kiếm cơ hội phát triển\" trái ngược với tinh thần \"nằm yên\" - thái độ tiêu cực, thụ động."
+    },
+    {
+        question: "Trong biện chứng duy vật, mâu thuẫn có vai trò gì?",
+        options: [
+            "A) Cản trở sự phát triển",
+            "B) Là động lực của sự phát triển",
+            "C) Không ảnh hưởng đến sự phát triển", 
+            "D) Chỉ có tác dụng tiêu cực"
+        ],
+        correct: 1,
+        explanation: "Mâu thuẫn là nguồn gốc, động lực nội tại của mọi vận động, thay đổi và phát triển."
+    },
+    {
+        question: "Nguyên nhân chính khiến trào lưu \"nằm yên\" xuất hiện tại Việt Nam là gì?",
+        options: [
+            "A) Ảnh hưởng của văn hóa phương Tây",
+            "B) Áp lực kinh tế và cạnh tranh xã hội",
+            "C) Sự phát triển của công nghệ",
+            "D) Thay đổi khí hậu"
+        ],
+        correct: 1,
+        explanation: "Nguyên nhân chính là áp lực kinh tế (lạm phát, giá nhà cao) và áp lực xã hội (cạnh tranh việc làm gay gắt)."
+    },
+    {
+        question: "Theo quy luật phủ định của phủ định, sự phát triển diễn ra như thế nào?",
+        options: [
+            "A) Theo đường thẳng liên tục",
+            "B) Theo hình xoắn ốc, lên cao hơn",
+            "C) Theo chu kỳ lặp lại không thay đổi",
+            "D) Hoàn toàn ngẫu nhiên"
+        ],
+        correct: 1,
+        explanation: "Sự phát triển theo hình xoắn ốc: phủ định cái cũ để khẳng định cái mới ở trình độ cao hơn."
+    },
+    {
+        question: "Tại sao trào lưu \"nằm yên\" được đánh giá là không phù hợp với LLCT?",
+        options: [
+            "A) Vì nó quá hiện đại",
+            "B) Vì nó đi ngược lại tính năng động của nhận thức",
+            "C) Vì nó không phổ biến",
+            "D) Vì nó xuất phát từ nước ngoài"
+        ],
+        correct: 1,
+        explanation: "LLCT khẳng định tính năng động, sáng tạo của nhận thức và vai trò tích cực của con người trong cải tạo thực tiễn."
+    },
+    {
+        question: "Giải pháp nào được đề xuất thay cho \"nằm yên\"?",
+        options: [
+            "A) Làm việc không ngừng nghỉ", 
+            "B) Hành động thông minh, có kế hoạch",
+            "C) Trốn tránh mọi khó khăn",
+            "D) Chấp nhận hiện trạng mãi mãi"
+        ],
+        correct: 1,
+        explanation: "Thay vì \"nằm yên\", cần \"hành động thông minh\" với kế hoạch cụ thể, từng bước cải thiện."
     }
 ];
+
+// AI sẽ tự động tạo quiz từ ngân hàng câu hỏi
+let currentQuizData = [];
+
+function generateRandomQuiz() {
+    // Trộn ngẫu nhiên ngân hàng câu hỏi
+    const shuffled = [...quizQuestionBank].sort(() => 0.5 - Math.random());
+    // Lấy 10 câu đầu tiên
+    currentQuizData = shuffled.slice(0, 10);
+    return currentQuizData;
+}
 
 // AI Usage data
 const aiUsageData = {
