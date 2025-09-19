@@ -24,6 +24,11 @@ function showSection(sectionId, button) {
         newSection.innerHTML = createQuizContent();
     } else if (sectionId === 'ai-usage') {
         newSection.innerHTML = createAIUsageContent();
+    } else if (sectionId === 'aiFeatures') {
+        newSection.innerHTML = `
+            <h2>🤖 Tính năng AI tương tác</h2>
+            ${contentData.aiFeatures.content}
+        `;
     } else if (contentData[sectionId]) {
         newSection.innerHTML = `
             <h2>${contentData[sectionId].title}</h2>
@@ -58,7 +63,7 @@ function showSection(sectionId, button) {
 }
 
 function updateProgressBar() {
-    const sections = ['intro', 'theory', 'analysis', 'examples', 'conclusion', 'quiz', 'ai-usage'];
+    const sections = ['intro', 'theory', 'analysis', 'examples', 'conclusion', 'aiFeatures', 'quiz', 'ai-usage'];
     const currentIndex = sections.indexOf(currentSection);
     const progress = ((currentIndex + 1) / sections.length) * 100;
     
@@ -78,7 +83,7 @@ function createQuizContent() {
     
     let quizHTML = `
         <h2>📝 Kiểm tra kiến thức</h2>
-        <div style="background: linear-gradient(135deg, #000000ff, #4ba2e9ff); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+        <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
             <h3>🤖 Quiz được tạo bởi AI</h3>
             <p>Hệ thống AI đã tự động tạo ra <strong>10 câu hỏi ngẫu nhiên</strong> từ ngân hàng 15+ câu hỏi về LLCT và trào lưu "nằm yên".</p>
             <p><small>Mỗi lần làm bài sẽ có bộ câu hỏi khác nhau!</small></p>

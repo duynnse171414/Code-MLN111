@@ -29,6 +29,54 @@ const contentData = {
             <p>2. Đánh giá tính đúng đắn hoặc sai lầm</p>
             <p>3. Đưa ra quan điểm có căn cứ khoa học</p>
             <p>4. Đề xuất hướng giải quyết phù hợp</p>
+            
+            <div style="background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; padding: 20px; border-radius: 15px; margin: 25px 0; text-align: center; box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3); animation: pulse 2s infinite;">
+                <h3>🤖 Khám phá Tính năng AI tương tác!</h3>
+                <p>Trải nghiệm các trò chơi giáo dục do AI tạo ra để học LLCT một cách thú vị</p>
+                <button onclick="goToAIGames()" style="background: white; color: #8e44ad; border: none; padding: 15px 30px; border-radius: 25px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 10px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    🎮 Truy cập AI Games
+                </button>
+            </div>
+        `
+    },
+
+    aiFeatures: {
+        title: "🤖 Tính năng AI tương tác",
+        content: `
+            <div class="ai-game-section">
+                <div class="theory-box">
+                    <h3>🎮 Trò chơi do AI tạo ra</h3>
+                    <p>Khám phá trò chơi giáo dục được AI thiết kế để củng cố kiến thức LLCT một cách thú vị!</p>
+                </div>
+
+                <!-- Memory Game -->
+                <div class="theory-box">
+                    <h3>🧠 Trò chơi Ghép đôi Khái niệm LLCT</h3>
+                    <p>AI tạo ra trò chơi ghép đôi để ghi nhớ các khái niệm LLCT. Khi ghép đúng, hệ thống sẽ giải thích tại sao hai khái niệm lại có mối liên hệ với nhau.</p>
+                    <button onclick="window.startMemoryGame()" style="background: #e74c3c; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; margin: 10px 0;">
+                        🎯 Bắt đầu trò chơi
+                    </button>
+                    <div id="memory-game" style="display: none; margin-top: 15px;">
+                        <div id="memory-stats" style="text-align: center; margin-bottom: 15px; font-weight: bold;"></div>
+                        <div id="memory-board" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 400px; margin: 0 auto;"></div>
+                        <div id="memory-explanations" style="margin-top: 20px; background: #f8f9fa; padding: 15px; border-radius: 10px; display: none;">
+                            <h4>📚 Giải thích các cặp khái niệm:</h4>
+                            <div id="explanations-content"></div>
+                        </div>
+                        <div id="memory-result" style="margin-top: 15px; text-align: center; display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- AI Personality Test -->
+                <div class="conclusion-box">
+                    <h3>🔍 Trắc nghiệm tính cách học tập</h3>
+                    <p>AI đánh giá phong cách học tập của bạn dựa trên LLCT</p>
+                    <button onclick="window.startPersonalityTest()" style="background: #16a085; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; margin: 10px 0;">
+                        🧭 Bắt đầu trắc nghiệm
+                    </button>
+                    <div id="personality-test" style="display: none; text-align: left; margin-top: 15px;"></div>
+                </div>
+            </div>
         `
     },
 
@@ -203,6 +251,14 @@ const contentData = {
                 <p>✅ Xây dựng mạng lưới quan hệ xã hội</p>
                 <p>✅ Tham gia các hoạt động cộng đồng</p>
                 <p>✅ Đặt mục tiêu thực tế, từng bước</p>
+                
+                <div style="background: rgba(155, 89, 182, 0.1); border: 2px solid #9b59b6; border-radius: 10px; padding: 15px; margin-top: 20px;">
+                    <h4 style="color: #8e44ad; margin-bottom: 10px;">🎯 Thực hành với AI Games</h4>
+                    <p style="color: #2c3e50; margin-bottom: 15px;">Củng cố kiến thức LLCT qua các trò chơi tương tác do AI tạo ra!</p>
+                    <button onclick="goToAIGames()" style="background: linear-gradient(45deg, #9b59b6, #8e44ad); color: white; border: none; padding: 12px 25px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
+                        🤖 Khám phá AI Games ngay
+                    </button>
+                </div>
             </div>
         `
     },

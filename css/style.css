@@ -1,4 +1,184 @@
-/* Reset và Base Styles */
+/* Đặc biệt highlight cho nút AI Games */
+.ai-games-btn {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad) !important;
+    border: 2px solid #e74c3c !important;
+    animation: aiGlow 2s infinite alternate;
+    position: relative;
+    overflow: visible;
+}
+
+.ai-games-btn::after {
+    content: '✨';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes aiGlow {
+    0% { 
+        box-shadow: 0 5px 15px rgba(155, 89, 182, 0.5);
+        transform: scale(1);
+    }
+    100% { 
+        box-shadow: 0 8px 25px rgba(155, 89, 182, 0.8);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1) rotate(0deg);
+    }
+    50% { 
+        opacity: 0.5; 
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+.ai-games-btn:hover {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.6) !important;
+}/* AI Games Quiz Generator styles */
+.ai-quiz-header {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border: 2px solid #2196F3;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(33, 150, 243, 0.2);
+}
+
+.ai-quiz-header h3 {
+    color: #1565c0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.ai-quiz-header p {
+    color: #1976d2;
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.ai-quiz-header small {
+    color: #1976d2;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.ai-quiz-header button {
+    background: linear-gradient(135deg, #2196F3, #1976d2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+.ai-quiz-header button:hover {
+    background: linear-gradient(135deg, #1976d2, #1565c0);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.4);
+}/* Thêm hiệu ứng triết học cho các sections */
+.content-section h2::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.content-section h3::before {
+    content: "📜";
+    margin-right: 8px;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+/* Philosophy quote decorations */
+.philosophy-quote {
+    position: relative;
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: rgba(236, 240, 241, 0.8);
+    border-left: 4px solid #bdc3c7;
+    border-radius: 0 8px 8px 0;
+}
+
+.philosophy-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    font-size: 3em;
+    color: #bdc3c7;
+    font-family: serif;
+}
+
+.philosophy-quote::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-size: 3em;
+    color: #bdc3c7;
+    font-family: serif;
+}
+
+/* Academic decorative elements */
+.academic-decoration {
+    text-align: center;
+    margin: 30px 0;
+    opacity: 0.3;
+    font-size: 2em;
+    color: #95a5a6;
+}
+
+/* Ancient scroll effect */
+.scroll-effect {
+    background: linear-gradient(45deg, #f4f1de, #e9c46a);
+    border: 2px solid #e76f51;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.scroll-effect::before,
+.scroll-effect::after {
+    content: '🏺';
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.3;
+}
+
+.scroll-effect::before {
+    top: 10px;
+    left: 15px;
+}
+
+.scroll-effect::after {
+    bottom: 10px;
+    right: 15px;
+    transform: rotate(180deg);
+}/* Reset và Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +189,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: 
+        linear-gradient(rgba(52, 73, 94, 0.85), rgba(44, 62, 80, 0.85)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="books" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(45)"><rect width="100" height="100" fill="%23f8f9fa" opacity="0.1"/><rect x="10" y="20" width="80" height="8" fill="%23bdc3c7" opacity="0.3"/><rect x="15" y="35" width="70" height="6" fill="%2395a5a6" opacity="0.3"/><rect x="20" y="48" width="60" height="4" fill="%23ecf0f1" opacity="0.3"/><circle cx="25" cy="75" r="3" fill="%23f39c12" opacity="0.4"/><path d="M60 65 L80 75 L60 85 Z" fill="%23e74c3c" opacity="0.3"/></pattern></defs><rect width="100%" height="100%" fill="url(%23books)"/></svg>') fixed,
+        radial-gradient(circle at 20% 80%, rgba(142, 68, 173, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.3) 0%, transparent 50%);
+    background-size: cover, 200px 200px, 800px 800px, 600px 600px;
     min-height: 100vh;
+    position: relative;
 }
 
 /* Container */
@@ -23,12 +209,33 @@ body {
 /* Header Styles */
 .header {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+    animation: philosophyPulse 15s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes philosophyPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+    50% { transform: scale(1.1) rotate(180deg); opacity: 0.1; }
 }
 
 .header h1 {
@@ -44,47 +251,110 @@ body {
     font-weight: 500;
 }
 
-/* Navigation Styles */
+/* Navigation với theme triết học */
 .navigation {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 30px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.navigation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        #3498db 0%, 
+        #e74c3c 25%, 
+        #f39c12 50%, 
+        #27ae60 75%, 
+        #9b59b6 100%);
+    border-radius: 15px 15px 0 0;
 }
 
 .nav-btn {
-    background: linear-gradient(45deg, #3498db, #2980b9);
+    background: linear-gradient(45deg, #34495e, #2c3e50);
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 12px 20px;
     margin: 5px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-btn:hover::before {
+    left: 100%;
 }
 
 .nav-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #3498db, #2980b9);
 }
 
 .nav-btn.active {
     background: linear-gradient(45deg, #e74c3c, #c0392b);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
 }
 
 /* Content Section Styles */
 .content-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 30px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
     display: none;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-section::before {
+    content: '📚';
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    opacity: 0.3;
+    animation: bookFloat 6s infinite ease-in-out;
+}
+
+@keyframes bookFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
 }
 
 .content-section.active {
@@ -112,27 +382,49 @@ body {
     margin-right: 10px;
 }
 
-/* Box Styles */
+/* Box Styles với theme triết học */
 .theory-box {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(233, 236, 239, 0.95));
     border-left: 5px solid #3498db;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.theory-box::before {
+    content: '⚛️';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    opacity: 0.4;
 }
 
 .example-box {
-    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    background: linear-gradient(135deg, rgba(255, 243, 205, 0.95), rgba(255, 234, 167, 0.95));
     border-left: 5px solid #f39c12;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.example-box::before {
+    content: '🏛️';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    opacity: 0.4;
 }
 
 .conclusion-box {
-    background: linear-gradient(135deg, #d1ecf1, #b3e5fc);
+    background: linear-gradient(135deg, rgba(209, 236, 241, 0.95), rgba(179, 229, 252, 0.95));
     border-left: 5px solid #17a2b8;
     padding: 25px;
     margin: 25px 0;
@@ -140,24 +432,40 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #2c3e50;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.conclusion-box::before {
+    content: '🎯';
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    opacity: 0.4;
 }
 
 .conclusion-box h2,
 .conclusion-box h3 {
     color: #2c3e50 !important;
+    position: relative;
+    z-index: 1;
 }
 
 .conclusion-box p {
     color: #2c3e50 !important;
+    position: relative;
+    z-index: 1;
 }
 
-/* Quiz Styles - Updated */
+/* Quiz Styles - Cải thiện màu sắc */
 .quiz-container {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 15px;
     padding: 25px;
     margin: 20px 0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .quiz-question {
@@ -165,199 +473,165 @@ body {
     margin-bottom: 15px;
     color: #2c3e50;
     font-weight: bold;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .quiz-option {
-    background: white;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: 2px solid #bdc3c7;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 12px 0;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #333333; /* Thêm màu chữ rõ ràng */
-    font-size: 16px; /* Đảm bảo font size */
-    font-weight: 500; /* Làm chữ đậm hơn một chút */
-    line-height: 1.4; /* Cải thiện độ cao dòng */
-    display: block; /* Đảm bảo hiển thị đúng */
-    position: relative; /* Cho animation */
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .quiz-option:hover {
     border-color: #3498db;
-    background: #f8f9ff;
-    transform: translateX(5px);
-    color: #2c3e50; /* Màu chữ khi hover */
+    background: linear-gradient(135deg, #ebf3fd, #d6eaff);
+    transform: translateX(8px) translateY(-2px);
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.2);
+    color: #2980b9;
+}
+
+.quiz-option:hover::before {
+    left: 100%;
 }
 
 .quiz-option.correct {
-    background: #d4edda !important;
-    border-color: #28a745 !important;
-    color: #155724 !important; /* Màu xanh đậm cho text đúng */
-    font-weight: 600;
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-color: #28a745;
+    color: #155724;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+.quiz-option.correct::after {
+    content: '✓';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #28a745;
+    font-weight: bold;
 }
 
 .quiz-option.incorrect {
-    background: #f8d7da !important;
-    border-color: #dc3545 !important;
-    color: #721c24 !important; /* Màu đỏ đậm cho text sai */
-    font-weight: 600;
+    background: linear-gradient(135deg, #f8d7da, #f1c2c7);
+    border-color: #dc3545;
+    color: #721c24;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3);
+}
+
+.quiz-option.incorrect::after {
+    content: '✗';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #dc3545;
+    font-weight: bold;
 }
 
 /* Quiz explanation styles */
 .quiz-explanation {
-    margin-top: 15px;
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
+    border: 1px solid #c3e6cb;
+    border-left: 4px solid #28a745;
     padding: 15px;
-    background: #fff3cd;
-    border: 1px solid #ffeaa7;
+    margin-top: 15px;
     border-radius: 8px;
-    color: #856404 !important;
-    font-style: italic;
-    display: none;
+    color: #155724;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 3px 6px rgba(40, 167, 69, 0.1);
+}
+
+.quiz-explanation strong {
+    color: #0d4f14;
+    font-size: 15px;
 }
 
 /* Quiz result styles */
 #quizResult {
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
     border: 2px solid #28a745;
     border-radius: 15px;
-    padding: 30px;
-    margin: 30px 0;
+    padding: 25px;
+    margin-top: 20px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2);
+    color: #155724;
 }
 
 #quizResult h3 {
-    color: #28a745 !important;
-    margin-bottom: 20px;
+    color: #0d4f14;
+    margin-bottom: 15px;
+    font-size: 1.4em;
 }
 
-#quizResult #scoreText {
-    font-size: 1.5em;
-    color: #2c3e50 !important;
-    margin: 15px 0;
+#scoreText {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0d4f14;
+    margin: 10px 0;
 }
 
-#quizResult #feedback {
-    color: #495057 !important;
+#feedback {
+    color: #155724;
     font-size: 1.1em;
     margin: 15px 0;
+    line-height: 1.4;
 }
 
-/* Animation classes */
-.bounce {
-    animation: bounceEffect 0.6s ease;
-}
-
-@keyframes bounceEffect {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateX(5px);
-    }
-    40% {
-        transform: translateY(-10px) translateX(5px);
-    }
-    60% {
-        transform: translateY(-5px) translateX(5px);
-    }
-}
-
-.shake {
-    animation: shakeEffect 0.6s ease;
-}
-
-@keyframes shakeEffect {
-    0%, 100% {
-        transform: translateX(5px);
-    }
-    10%, 30%, 50%, 70%, 90% {
-        transform: translateX(-5px);
-    }
-    20%, 40%, 60%, 80% {
-        transform: translateX(5px);
-    }
-}
-
-.scale-in {
-    animation: scaleInEffect 0.5s ease;
-}
-
-@keyframes scaleInEffect {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.pulse {
-    animation: pulseEffect 1.5s infinite;
-}
-
-@keyframes pulseEffect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Quiz button styles */
-.quiz-btn {
-    background: linear-gradient(45deg, #28a745, #20c997);
-    color: white !important;
+/* Quiz buttons */
+#quizResult button {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 25px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 8px 5px;
     transition: all 0.3s ease;
-    margin: 10px 5px;
-    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
 }
 
-.quiz-btn:hover {
+#quizResult button:hover {
+    background: linear-gradient(135deg, #20c997, #17a2b8);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
-    color: white !important;
-}
-
-.quiz-btn:active {
-    transform: translateY(0);
-}
-
-/* AI Quiz generator button */
-.ai-quiz-btn {
-    background: linear-gradient(45deg, #6f42c1, #5a32a3);
-    color: white !important;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3);
-}
-
-.ai-quiz-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(111, 66, 193, 0.4);
-    color: white !important;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
 }
 
 /* AI Usage Styles */
 .ai-usage {
-    background: linear-gradient(135deg, #292c29, #d4edda);
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
     border: 2px solid #28a745;
     border-radius: 15px;
     padding: 25px;
@@ -373,7 +647,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
-    background: rgb(73, 82, 74);
+    background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -392,7 +666,7 @@ body {
 }
 
 .commitment-box {
-    background: linear-gradient(135deg, #312f2c, #ffe0b2);
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
     border: 2px solid #ff9800;
     border-radius: 15px;
     padding: 25px;
@@ -417,7 +691,7 @@ body {
     transition: width 1s ease;
 }
 
-/* Floating Elements */
+/* Floating Elements với theme triết học */
 .floating-elements {
     position: fixed;
     top: 0;
@@ -432,4 +706,44 @@ body {
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    animation: philosophyFloat 8s ease-in-out infinite;
+}
+
+.float-element::before {
+    content: '📖';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    opacity: 0.3;
+    animation: bookSpin 12s linear infinite;
+}
+
+.float-element:nth-child(2)::before { content: '⚖️'; }
+.float-element:nth-child(3)::before { content: '🧠'; }
+.float-element:nth-child(4)::before { content: '💭'; }
+
+@keyframes philosophyFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+        opacity: 0.3;
+    }
+    25% { 
+        transform: translateY(-15px) rotate(90deg); 
+        opacity: 0.5;
+    }
+    50% { 
+        transform: translateY(-25px) rotate(180deg); 
+        opacity: 0.2;
+    }
+    75% { 
+        transform: translateY(-15px) rotate(270deg); 
+        opacity: 0.4;
+    }
+}
+
+@keyframes bookSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
