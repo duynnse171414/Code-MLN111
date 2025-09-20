@@ -1,11 +1,135 @@
-// Nội dung trang web
+examples = {
+        title: "🌍 Ví dụ thực tiễn và so sánh quốc tế",
+        content: `
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Bản đồ thế giới" 
+                     style="width: 100%; max-width: 600px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+            
+            <div class="example-box">
+                <h3>📊 Tình hình tại Việt Nam (2023-2024)</h3>
+                <div style="display: flex; align-items: flex-start; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Thanh niên Việt Nam" 
+                         style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Số liệu thống kê:</strong></p>
+                        <p>• 35% thanh niên từ 18-30 tuổi có biểu hiện "nằm yên"</p>
+                        <p>• 28% sinh viên mất động lực học tập sau đại dịch</p>
+                        <p>• Tỷ lệ thất nghiệp trong nhóm 15-24 tuổi: 7.2%</p>
+                        
+                        <p><strong>Nguyên nhân cụ thể:</strong></p>
+                        <p>🔹 Lạm phát 2023: 3.25%, ảnh hưởng sức mua</p>
+                        <p>🔹 Giá nhà tại TP.HCM tăng 8.5% so với 2022</p>
+                        <p>🔹 Áp lực "thành đạt sớm" từ mạng xã hội</p>
+                        <p>🔹 Ảnh hưởng của các "influencer" tuyên truyền lối sống tiêu cực</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <h3>🌏 So sánh quốc tế</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Trung Quốc hiện đại" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                        <p><strong>Trung Quốc - "Tang ping" (躺平):</strong></p>
+                        <p>• Xuất hiện do áp lực "996" (9h sáng - 9h tối, 6 ngày/tuần)</p>
+                        <p>• Chính phủ có chính sách can thiệp tích cực</p>
+                        <p>• Kết quả: Giảm từ 40% xuống 25% trong 2 năm</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Nhật Bản truyền thống" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                        <p><strong>Nhật Bản - "Hikikomori":</strong></p>
+                        <p>• 1.5% dân số (khoảng 1.8 triệu người)</p>
+                        <p>• Có chương trình hỗ trợ chuyên biệt</p>
+                        <p>• Tỷ lệ phục hồi: 60% sau 2 năm can thiệp</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Seoul Hàn Quốc" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                        <p><strong>Hàn Quốc - "N-po generation":</strong></p>
+                        <p>• Từ bỏ nhiều thứ do áp lực kinh tế</p>
+                        <p>• Chính sách hỗ trợ nhà ở, việc làm cho thanh niên</p>
+                        <p>• Cải thiện tích cực từ 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h3>📈 Các trường hợp thành công tại Việt Nam</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Văn phòng hiện đại Việt Nam" 
+                         style="width: 200px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Mô hình "Work-Life Balance" tại các công ty:</strong></p>
+                        <p>• FPT Software: Chế độ làm việc linh hoạt</p>
+                        <p>• VNG Corporation: Môi trường làm việc sáng tạo</p>
+                        <p>• Kết quả: Tăng 25% năng suất, giảm 40% turnover</p>
+                        
+                        <p><strong>Các chương trình hỗ trợ thanh niên:</strong></p>
+                        <p>• "Thanh niên khởi nghiệp" của T.Ư Đoàn</p>
+                        <p>• Chương trình "1000 công ty khởi nghiệp" đến 2025</p>
+                        <p>• Quỹ hỗ trợ thanh niên khởi nghiệp: 5,000 tỷ VNĐ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion-box">
+                <h3>💡 Bài học kinh nghiệm</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Nhóm người làm việc tích cực" 
+                         style="width: 200px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Thay vì "nằm yên", cần:</strong></p>
+                        <p>✅ Thay đổi tư duy từ tiêu cực sang tích cực</p>
+                        <p>✅ Tìm hiểu và phát triển kỹ năng mềm</p>
+                        <p>✅ Xây dựng mạng lưới quan hệ xã hội</p>
+                        <p>✅ Tham gia các hoạt động cộng đồng</p>
+                        <p>✅ Đặt mục tiêu thực tế, từng bước</p>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(155, 89, 182, 0.1); border: 2px solid #9b59b6; border-radius: 10px; padding: 15px; margin-top: 20px;">
+                    <h4 style="color: #8e44ad; margin-bottom: 10px;">🎯 Thực hành với AI Games</h4>
+                    <p style="color: #2c3e50; margin-bottom: 15px;">Củng cố kiến thức LLCT qua các trò chơi tương tác do AI tạo ra!</p>
+                    <button onclick="goToAIGames()" style="background: linear-gradient(45deg, #9b59b6, #8e44ad); color: white; border: none; padding: 12px 25px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
+                        🤖 Khám phá AI Games ngay
+                    </button>
+                </div>
+            </div>
+        `
+    }// Nội dung trang web
 const contentData = {
     intro: {
         title: "🎯 Giới thiệu về trào lưu \"Nằm yên mặc kệ đời\"",
         content: `
+            <div class="intro-image-section">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Người trẻ mệt mỏi với cuộc sống" 
+                     style="width: 100%; max-width: 600px; height: 300px; object-fit: cover; border-radius: 15px; margin: 20px auto; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+            
             <div class="theory-box">
                 <h3>Khái niệm trào lưu "Tang ping" (躺平)</h3>
-                <p><strong>"Nằm yên mặc kệ đời"</strong> hay "Tang ping" là trào lưu xuất phát từ Trung Quốc năm 2021, lan rộng đến nhiều quốc gia châu Á. Đây là thái độ sống tiêu cực, từ bỏ các nỗ lực cải thiện cuộc sống, chấp nhận hiện trạng một cách thụ động.</p>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Người nằm trên giường" 
+                         style="width: 200px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>"Nằm yên mặc kệ đời"</strong> hay "Tang ping" là trào lưu xuất phát từ Trung Quốc năm 2021, lan rộng đến nhiều quốc gia châu Á. Đây là thái độ sống tiêu cực, từ bỏ các nỗ lực cải thiện cuộc sống, chấp nhận hiện trạng một cách thụ động.</p>
+                    </div>
+                </div>
                 
                 <p><strong>Đặc điểm chính:</strong></p>
                 <p>• Từ bỏ việc phấn đấu trong công việc, học tập</p>
@@ -16,11 +140,18 @@ const contentData = {
 
             <div class="example-box">
                 <h3>Bối cảnh xuất hiện tại Việt Nam</h3>
-                <p>Tại Việt Nam, trào lưu này xuất hiện trong bối cảnh:</p>
-                <p><strong>• Áp lực kinh tế:</strong> Giá cả tăng cao, thu nhập không theo kịp</p>
-                <p><strong>• Áp lực xã hội:</strong> Cạnh tranh việc làm gay gắt</p>
-                <p><strong>• Ảnh hưởng mạng xã hội:</strong> So sánh với cuộc sống người khác</p>
-                <p><strong>• Đại dịch COVID-19:</strong> Thay đổi quan điểm sống</p>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Thành phố Việt Nam hiện đại" 
+                         style="width: 200px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p>Tại Việt Nam, trào lưu này xuất hiện trong bối cảnh:</p>
+                        <p><strong>• Áp lực kinh tế:</strong> Giá cả tăng cao, thu nhập không theo kịp</p>
+                        <p><strong>• Áp lực xã hội:</strong> Cạnh tranh việc làm gay gắt</p>
+                        <p><strong>• Ảnh hưởng mạng xã hội:</strong> So sánh với cuộc sống người khác</p>
+                        <p><strong>• Đại dịch COVID-19:</strong> Thay đổi quan điểm sống</p>
+                    </div>
+                </div>
             </div>
 
             <h3>🎯 Mục tiêu phân tích</h3>
@@ -83,44 +214,72 @@ const contentData = {
     theory: {
         title: "📚 Cơ sở lý thuyết LLCT Duy vật Biện chứng",
         content: `
+            <div class="theory-image-header">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Thư viện cổ điển với sách vở" 
+                     style="width: 100%; max-width: 600px; height: 250px; object-fit: cover; border-radius: 15px; margin: 20px auto; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+            
             <div class="theory-box">
                 <h3>1. Nguyên lý phản ánh</h3>
-                <p><strong>Nhận thức là sự phản ánh thế giới khách quan vào đầu óc con người.</strong></p>
-                <p>• Nhận thức xuất phát từ thực tiễn</p>
-                <p>• Thực tiễn là cơ sở, động lực của nhận thức</p>
-                <p>• Nhận thức có tính năng động, sáng tạo</p>
-                
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Gương phản chiếu" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Nhận thức là sự phản ánh thế giới khách quan vào đầu óc con người.</strong></p>
+                        <p>• Nhận thức xuất phát từ thực tiễn</p>
+                        <p>• Thực tiễn là cơ sở, động lực của nhận thức</p>
+                        <p>• Nhận thức có tính năng động, sáng tạo</p>
+                    </div>
+                </div>
                 <p><strong>Ứng dụng:</strong> Trào lưu "nằm yên" phản ánh những mâu thuẫn thực tế trong xã hội hiện đại.</p>
             </div>
 
             <div class="theory-box">
                 <h3>2. Quy luật từ cảm tính đến lý tính</h3>
-                <p><strong>Nhận thức phát triển từ cấp độ cảm tính lên lý tính.</strong></p>
-                
-                <p><strong>• Nhận thức cảm tính:</strong> Cảm giác, tri giác, biểu tượng</p>
-                <p><strong>• Nhận thức lý tính:</strong> Khái niệm, phán đoán, suy lý</p>
-                
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Từ mắt đến não bộ" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Nhận thức phát triển từ cấp độ cảm tính lên lý tính.</strong></p>
+                        <p><strong>• Nhận thức cảm tính:</strong> Cảm giác, tri giác, biểu tượng</p>
+                        <p><strong>• Nhận thức lý tính:</strong> Khái niệm, phán đoán, suy lý</p>
+                    </div>
+                </div>
                 <p><strong>Ứng dụng:</strong> Phân tích trào lưu không chỉ dừng ở cảm tính (thấy nhiều người làm theo) mà phải lên lý tính (hiểu bản chất, nguyên nhân).</p>
             </div>
 
             <div class="theory-box">
                 <h3>3. Quy luật từ nhận thức đến thực tiễn</h3>
-                <p><strong>Nhận thức phải quay trở lại thực tiễn để kiểm nghiệm và cải tạo thực tiễn.</strong></p>
-                
-                <p>• Thực tiễn là tiêu chuẩn kiểm nghiệm chân lý</p>
-                <p>• Nhận thức đúng hướng dẫn thực tiễn thành công</p>
-                <p>• Nhận thức sai dẫn đến thực tiễn thất bại</p>
-                
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Từ ý tưởng đến hành động" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Nhận thức phải quay trở lại thực tiễn để kiểm nghiệm và cải tạo thực tiễn.</strong></p>
+                        <p>• Thực tiễn là tiêu chuẩn kiểm nghiệm chân lý</p>
+                        <p>• Nhận thức đúng hướng dẫn thực tiễn thành công</p>
+                        <p>• Nhận thức sai dẫn đến thực tiễn thất bại</p>
+                    </div>
+                </div>
                 <p><strong>Ứng dụng:</strong> Đánh giá trào lưu "nằm yên" thông qua kết quả thực tế mà nó mang lại.</p>
             </div>
 
             <div class="theory-box">
                 <h3>4. Tính biện chứng của nhận thức</h3>
-                <p><strong>Nhận thức phát triển theo quy luật biện chứng.</strong></p>
-                
-                <p>• <strong>Quy luật đối lập thống nhất:</strong> Mọi sự vật đều có mâu thuẫn nội tại</p>
-                <p>• <strong>Quy luật chuyển hóa từ lượng sang chất:</strong> Sự thay đổi dần dần có thể dẫn đến bước ngoặt</p>
-                <p>• <strong>Quy luật phủ định của phủ định:</strong> Sự phát triển theo hình xoắn ốc</p>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Biểu tượng Yin Yang" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Nhận thức phát triển theo quy luật biện chứng.</strong></p>
+                        <p>• <strong>Quy luật đối lập thống nhất:</strong> Mọi sự vật đều có mâu thuẫn nội tại</p>
+                        <p>• <strong>Quy luật chuyển hóa từ lượng sang chất:</strong> Sự thay đổi dần dần có thể dẫn đến bước ngoặt</p>
+                        <p>• <strong>Quy luật phủ định của phủ định:</strong> Sự phát triển theo hình xoắn ốc</p>
+                    </div>
+                </div>
             </div>
         `
     },
