@@ -286,6 +286,19 @@ window.goToAIGames = function() {
 // Initialize application when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     window.app = new LyingFlatAnalysisApp();
+    
+    // Load intro content immediately on page load
+    setTimeout(function() {
+        if (typeof loadIntroContent === 'function') {
+            loadIntroContent();
+        } else {
+            // Fallback: trigger intro button click
+            var introBtn = document.querySelector('.nav-btn.active');
+            if (introBtn && typeof showSection === 'function') {
+                showSection('intro', introBtn);
+            }
+        }
+    }, 100);
 });
 
 // Expose global functions for backward compatibility
