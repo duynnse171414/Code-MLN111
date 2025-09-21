@@ -98,7 +98,7 @@ function createQuizContent() {
     
     let quizHTML = `
         <h2>📝 Kiểm tra kiến thức</h2>
-        <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+        <div style="background: linear-gradient(135deg, #365469ff, #30495eff); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
             <h3>🤖 Quiz được tạo bởi AI</h3>
             <p>Hệ thống AI đã tự động tạo ra <strong>10 câu hỏi ngẫu nhiên</strong> từ ngân hàng 15+ câu hỏi về LLCT và trào lưu "nằm yên".</p>
             <p><small>Mỗi lần làm bài sẽ có bộ câu hỏi khác nhau!</small></p>
@@ -226,30 +226,6 @@ function createAIUsageContent() {
         <h2>🤖 AI Usage Report</h2>
         
         <div class="ai-usage">
-            <h3>📊 Báo cáo sử dụng AI có trách nhiệm</h3>
-            
-            <table class="ai-table">
-                <thead>
-                    <tr>
-                        <th>Công cụ AI</th>
-                        <th>Mục đích sử dụng</th>
-                        <th>Prompt chính</th>
-                        <th>Kết quả</th>
-                        <th>Chỉnh sửa/Biên soạn</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${aiUsageData.tools.map(tool => `
-                        <tr>
-                            <td data-label="Công cụ AI">${tool.tool}</td>
-                            <td data-label="Mục đích sử dụng">${tool.purpose}</td>
-                            <td data-label="Prompt chính">${tool.prompt}</td>
-                            <td data-label="Kết quả">${tool.result}</td>
-                            <td data-label="Chỉnh sửa/Biên soạn">${tool.modification}</td>
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
 
             <h3>✅ Kiểm chứng thông tin</h3>
             <p><strong>Nguồn tham khảo chính thống:</strong></p>
@@ -270,38 +246,6 @@ function createAIUsageContent() {
             <p>• Ví dụ thực tiễn và số liệu Việt Nam</p>
             <p>• Kết luận và đề xuất giải pháp</p>
             <p>• Câu hỏi kiểm tra và đáp án</p>
-        </div>
-
-        <div class="commitment-box">
-            <h3>📜 Cam kết liêm chính học thuật</h3>
-            <p><strong>Tôi cam kết:</strong></p>
-            <p>✅ AI chỉ đóng vai trò hỗ trợ kỹ thuật, không thay thế hoàn toàn việc học tập</p>
-            <p>✅ Toàn bộ nội dung chuyên môn đều do tôi nghiên cứu, biên soạn và chịu trách nhiệm</p>
-            <p>✅ Đã đối chiếu và kiểm chứng thông tin với các nguồn chính thống</p>
-            <p>✅ Sản phẩm thể hiện sự hiểu biết thực tế về môn học LLCT</p>
-            <p>✅ Tuân thủ đầy đủ yêu cầu về sử dụng AI có trách nhiệm</p>
-            
-            <p style="margin-top: 20px; font-style: italic; text-align: center;">
-                <strong>Sinh viên: [Tên sinh viên]</strong><br>
-                <strong>Ngày: [Ngày nộp bài]</strong>
-            </p>
-        </div>
-
-        <div class="example-box">
-            <h3>🎯 Đánh giá sản phẩm</h3>
-            <p><strong>Điểm mạnh của sản phẩm:</strong></p>
-            <p>✅ Ứng dụng chính xác lý thuyết LLCT vào phân tích thực tiễn</p>
-            <p>✅ Có quan điểm rõ ràng, lập luận logic</p>
-            <p>✅ Kết hợp lý thuyết với ví dụ thực tế sinh động</p>
-            <p>✅ Đa dạng định dạng: web tương tác, quiz, animation</p>
-            <p>✅ Sử dụng AI minh bạch, có trách nhiệm</p>
-            <p>✅ Cập nhật thông tin mới, bối cảnh Việt Nam 2023-2024</p>
-            
-            <p><strong>Giá trị học thuật:</strong></p>
-            <p>• Phân tích sâu sắc hiện tượng xã hội qua lăng kính triết học</p>
-            <p>• Đề xuất giải pháp thiết thực, khả thi</p>
-            <p>• Thể hiện khả năng vận dụng lý thuyết vào thực tiễn</p>
-            <p>• Định hướng tư duy tích cực cho thanh niên</p>
         </div>
     `;
 }

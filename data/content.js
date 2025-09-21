@@ -190,7 +190,7 @@ const contentData = {
                     <div id="memory-game" style="display: none; margin-top: 15px;">
                         <div id="memory-stats" style="text-align: center; margin-bottom: 15px; font-weight: bold;"></div>
                         <div id="memory-board" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 400px; margin: 0 auto;"></div>
-                        <div id="memory-explanations" style="margin-top: 20px; background: #f8f9fa; padding: 15px; border-radius: 10px; display: none;">
+                        <div id="memory-explanations" style="margin-top: 20px; background: #395068ff; padding: 15px; border-radius: 10px; display: none;">
                             <h4>📚 Giải thích các cặp khái niệm:</h4>
                             <div id="explanations-content"></div>
                         </div>
@@ -221,65 +221,130 @@ const contentData = {
             </div>
             
             <div class="theory-box">
-                <h3>1. Nguyên lý phản ánh</h3>
+                <h3>I. Khái niệm Lý luận Nhận thức</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Triết gia suy tư" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>Xuất phát từ tiếng Hy Lạp:</strong> Gnosis (tri thức) + Logos (học thuyết)</p>
+                        <p><strong>Lý luận nhận thức là một bộ phận của triết học, nghiên cứu:</strong></p>
+                        <p>• Bản chất, hình thức, giai đoạn của nhận thức</p>
+                        <p>• Con đường đạt tới chân lý, tiêu chuẩn chân lý</p>
+                        <p>• Mối quan hệ giữa tư duy - thế giới khách quan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <h3>II. Nguồn gốc và bản chất của nhận thức</h3>
                 <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
                     <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
                          alt="Gương phản chiếu" 
                          style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
-                        <p><strong>Nhận thức là sự phản ánh thế giới khách quan vào đầu óc con người.</strong></p>
-                        <p>• Nhận thức xuất phát từ thực tiễn</p>
-                        <p>• Thực tiễn là cơ sở, động lực của nhận thức</p>
-                        <p>• Nhận thức có tính năng động, sáng tạo</p>
+                        <p><strong>🔹 Nguồn gốc:</strong> Thế giới vật chất khách quan tồn tại độc lập với ý thức con người</p>
+                        <p><strong>🔹 Khả năng nhận thức:</strong> Con người có thể nhận thức thế giới (V.I. Lênin: "không có cái gì không thể biết, chỉ có cái chưa biết")</p>
+                        <p><strong>🔹 Bản chất:</strong> Nhận thức là sự phản ánh tích cực, sáng tạo hiện thực khách quan</p>
+                        <p><strong>🔹 Tính phát triển:</strong> Quá trình biện chứng từ chưa biết → biết, biết ít → biết nhiều</p>
                     </div>
                 </div>
-                <p><strong>Ứng dụng:</strong> Trào lưu "nằm yên" phản ánh những mâu thuẫn thực tế trong xã hội hiện đại.</p>
             </div>
 
             <div class="theory-box">
-                <h3>2. Quy luật từ cảm tính đến lý tính</h3>
-                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
-                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                         alt="Từ mắt đến não bộ" 
-                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
-                    <div>
-                        <p><strong>Nhận thức phát triển từ cấp độ cảm tính lên lý tính.</strong></p>
-                        <p><strong>• Nhận thức cảm tính:</strong> Cảm giác, tri giác, biểu tượng</p>
-                        <p><strong>• Nhận thức lý tính:</strong> Khái niệm, phán đoán, suy lý</p>
-                    </div>
-                </div>
-                <p><strong>Ứng dụng:</strong> Phân tích trào lưu không chỉ dừng ở cảm tính (thấy nhiều người làm theo) mà phải lên lý tính (hiểu bản chất, nguyên nhân).</p>
-            </div>
-
-            <div class="theory-box">
-                <h3>3. Quy luật từ nhận thức đến thực tiễn</h3>
+                <h3>III. Thực tiễn và vai trò đối với nhận thức</h3>
                 <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
                          alt="Từ ý tưởng đến hành động" 
                          style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
-                        <p><strong>Nhận thức phải quay trở lại thực tiễn để kiểm nghiệm và cải tạo thực tiễn.</strong></p>
-                        <p>• Thực tiễn là tiêu chuẩn kiểm nghiệm chân lý</p>
-                        <p>• Nhận thức đúng hướng dẫn thực tiễn thành công</p>
-                        <p>• Nhận thức sai dẫn đến thực tiễn thất bại</p>
+                        <p><strong>Khái niệm thực tiễn:</strong> Toàn bộ hoạt động vật chất-cảm tính, có tính lịch sử-xã hội của con người nhằm cải tạo tự nhiên và xã hội</p>
+                        <p><strong>Ba đặc trưng của thực tiễn:</strong></p>
+                        <p>• Hoạt động vật chất-cảm tính (quan sát được)</p>
+                        <p>• Mang tính lịch sử-xã hội (diễn ra trong cộng đồng)</p>
+                        <p>• Có mục đích tự giác (khác hoạt động bản năng)</p>
                     </div>
                 </div>
-                <p><strong>Ứng dụng:</strong> Đánh giá trào lưu "nằm yên" thông qua kết quả thực tế mà nó mang lại.</p>
+                
+                <div style="background: #174470ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p><strong>Ba hình thức cơ bản của thực tiễn:</strong></p>
+                    <p>🏭 <strong>Sản xuất vật chất</strong> (cơ bản, quyết định)</p>
+                    <p>🏛️ <strong>Hoạt động chính trị-xã hội</strong> (biến đổi, cải tạo xã hội)</p>
+                    <p>🔬 <strong>Hoạt động thực nghiệm khoa học</strong> (tạo điều kiện nghiên cứu)</p>
+                </div>
+                
+                <p><strong>🎯 Vai trò của thực tiễn đối với nhận thức:</strong></p>
+                <p>• <strong>Cơ sở, động lực:</strong> Cung cấp tài liệu, đề ra nhu cầu cho nhận thức</p>
+                <p>• <strong>Mục đích:</strong> Nhận thức để phục vụ thực tiễn, soi đường cho thực tiễn</p>
+                <p>• <strong>Tiêu chuẩn chân lý:</strong> Thực tiễn là tiêu chuẩn khách quan duy nhất kiểm tra tri thức</p>
             </div>
 
             <div class="theory-box">
-                <h3>4. Tính biện chứng của nhận thức</h3>
-                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                         alt="Biểu tượng Yin Yang" 
+                <h3>IV. Các giai đoạn của quá trình nhận thức</h3>
+                <div style="text-align: center; margin: 20px 0; background: #174470ff; padding: 15px; border-radius: 10px;">
+                    <p><strong>V.I. Lênin:</strong> "Từ trực quan sinh động → tư duy trừu tượng → thực tiễn"</p>
+                    <p><em>Vòng khâu nhận thức lặp đi lặp lại, mỗi lần sâu hơn, toàn diện hơn</em></p>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Từ mắt đến não bộ" 
                          style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
-                        <p><strong>Nhận thức phát triển theo quy luật biện chứng.</strong></p>
-                        <p>• <strong>Quy luật đối lập thống nhất:</strong> Mọi sự vật đều có mâu thuẫn nội tại</p>
-                        <p>• <strong>Quy luật chuyển hóa từ lượng sang chất:</strong> Sự thay đổi dần dần có thể dẫn đến bước ngoặt</p>
-                        <p>• <strong>Quy luật phủ định của phủ định:</strong> Sự phát triển theo hình xoắn ốc</p>
+                        <p><strong>A. Nhận thức cảm tính (trực quan sinh động):</strong></p>
+                        <p>Phản ánh trực tiếp khách thể qua giác quan</p>
+                        <p><strong>Ba hình thức:</strong></p>
+                        <p>👁️ <strong>Cảm giác:</strong> Phản ánh thuộc tính riêng lẻ</p>
+                        <p>🧠 <strong>Tri giác:</strong> Tổng hợp nhiều cảm giác, phản ánh tương đối trọn vẹn</p>
+                        <p>💭 <strong>Biểu tượng:</strong> Hình ảnh tái hiện khi không còn tác động trực tiếp</p>
+                        <p><em>⚠️ Giai đoạn này chưa cho biết bản chất, quy luật của sự vật</em></p>
                     </div>
                 </div>
+                
+                <div style="display: flex; align-items: flex-start; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Tư duy logic" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>B. Nhận thức lý tính (tư duy trừu tượng):</strong></p>
+                        <p>Phản ánh gián tiếp, khái quát, sâu sắc hơn</p>
+                        <p><strong>Ba hình thức:</strong></p>
+                        <p>📋 <strong>Khái niệm:</strong> Phản ánh thuộc tính chung, bản chất</p>
+                        <p>⚖️ <strong>Phán đoán:</strong> Liên hệ các khái niệm để khẳng định/phủ định</p>
+                        <p>🔗 <strong>Suy lý:</strong> Rút kết luận mới từ phán đoán đã biết (quy nạp, diễn dịch)</p>
+                        <p><em>⚠️ Có nguy cơ xa rời hiện thực, phải kiểm tra bằng thực tiễn</em></p>
+                    </div>
+                </div>
+                
+                <div style="background: #174470ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p><strong>🤝 Sự thống nhất hai giai đoạn:</strong></p>
+                    <p>• Nhận thức cảm tính là cơ sở cho nhận thức lý tính</p>
+                    <p>• Lý tính giúp đi sâu bản chất sự vật</p>
+                    <p>• Hai giai đoạn bổ sung, chuyển hóa lẫn nhau</p>
+                    <p>• Thực tiễn là khâu bắt đầu và kết thúc, kiểm nghiệm chân lý</p>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <h3>V. Quan điểm về chân lý</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin: 15px 0;">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Biểu tượng cân bằng chân lý" 
+                         style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <p><strong>🎯 Khái niệm chân lý:</strong> Tri thức phù hợp với hiện thực khách quan và được thực tiễn kiểm nghiệm</p>
+                        
+                        <p><strong>🔍 Tính chất của chân lý:</strong></p>
+                        <p>• <strong>Tính khách quan:</strong> Nội dung phản ánh đúng hiện thực khách quan</p>
+                        <p>• <strong>Tính cụ thể-lịch sử:</strong> Sự vật biến đổi nên chân lý cũng phát triển dần</p>
+                        <p>• <strong>Tính tuyệt đối-tương đối:</strong> Thực tiễn là tiêu chuẩn tuyệt đối nhưng có tính tương đối ở từng giai đoạn</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 25px 0; text-align: center;">
+                <h3>🎯 Ứng dụng LLCT vào phân tích trào lưu "Nằm yên"</h3>
+                <p>Sử dụng các nguyên lý trên để phân tích bản chất, nguyên nhân và hướng giải quyết trào lưu một cách khoa học</p>
             </div>
         `
     },
